@@ -11,7 +11,13 @@ This is a practice for Stock Market ETL Pipeline extracts real-time or historica
 - Python 3.9+
 - Docker (for running Airflow)
 
-## To do list
-- Adjust the setting for the airflow settings
-- Running Airflow on Docker
+## Steps
+1. Running Airflow on docker using `docker compose up -d`
+    - if need to add new python lib, we need to add the create requirement.txt and then change the setting inside the docker-compose.yml file.
+2. After successfully build the docker, we need to add the connection to the Postgresql we will be using, click Admin -> Connection on the Airflow UI page to add the connection.
+3. Start the dag and check if everything run successfully.
 
+## Todo list
+- Adding job to parse the data and then save it to new database.
+- Create different dag for different purpose.
+- Try different kind of schedule method.
